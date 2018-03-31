@@ -1,0 +1,72 @@
+/*-----------------------------------------------------------------------------------
+
+    Theme Name: Canvas
+    Theme URI: http://themes.semicolonweb.com/html/canvas
+    Description: The Multi-Purpose Template
+    Author: SemiColonWeb
+    Author URI: http://themeforest.net/user/semicolonweb
+    Version: 5.0.3
+
+    LESS Stylesheet
+
+-----------------------------------------------------------------------------------*/
+
+
+// Initialize
+@import "variables";
+@import "mixins";
+
+// Bootstrap CSS
+@import "../../../../../node_modules/bootstrap/scss/bootstrap";
+
+// Vendor CSS
+@import "vendor/animate";
+@import "vendor/magnific-popup";
+@import "vendor/swiper";
+
+// Core CSS
+@import "typography";
+@import "helpers";
+@import "layouts";
+@import "concrete.fixes";
+
+
+// Content Blocks
+@import "topbar";
+@import "header";
+@import "sliders";
+@import "pagetitle";
+@import "content";
+//@import "portfolio";
+//@import "blog";
+//@import "shop";
+@import "events";
+
+// Shortcodes
+@import "shortcodes/countdown";
+@import "shortcodes/buttons";
+@import "shortcodes/promo";
+@import "shortcodes/feature-box";
+@import "shortcodes/google-calendar";
+@import "shortcodes/process-steps";
+@import "shortcodes/alerts";
+@import "shortcodes/social-icons";
+@import "shortcodes/toggles-accordions";
+@import "shortcodes/tabs";
+@import "shortcodes/faqs";
+@import "shortcodes/clients";
+@import "shortcodes/testimonials";
+@import "shortcodes/team";
+@import "shortcodes/pricing";
+@import "shortcodes/counter-skills";
+@import "shortcodes/carousel";
+@import "shortcodes/overlay";
+@import "shortcodes/headings";
+@import "shortcodes/dividers";
+@import "shortcodes/youtubebg";
+@import "shortcodes/misc";
+
+// Extra CSS
+@import "footer";
+@import "extras";
+@import "custom";

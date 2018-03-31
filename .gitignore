@@ -1,0 +1,19 @@
+# ignore system files
+.DS_Store
+.idea
+.vscode
+thumbs.db
+__MACOSX
+._*
+.*swp
+.*swo
+
+node_modules/
+
+/concrete
+/updates
+/application/config/database.php
+/application/config/generated_overrides
+/application/files/cache/*
+/application/files/tmp/*
+/application/files/*

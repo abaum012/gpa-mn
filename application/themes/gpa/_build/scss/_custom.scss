@@ -1,0 +1,171 @@
+
+/*-----------------------------------------------------------------------------------
+
+	custom.scss
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+    Font Awesome Custom CSS
+-----------------------------------------------------------------*/
+.fa-border-circle  {
+    border: solid 1px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.fa-stack {
+    margin-right: .5rem;
+}
+
+.fa-words {
+    font-family: $font-family-base;
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+/* ----------------------------------------------------------------
+    list Custom CSS
+-----------------------------------------------------------------*/
+ul.icon-list {
+    li {
+        padding-bottom: 1rem;
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    margin: 0;
+}
+
+
+/* ----------------------------------------------------------------
+    Isotope Grid Custom CSS
+-----------------------------------------------------------------*/
+.grid-item {
+    margin-bottom: 50px;
+}
+
+
+/* ----------------------------------------------------------------
+    Available Hounds CSS
+-----------------------------------------------------------------*/
+.grid-item {
+    .card {
+        border: none;
+        border-top: solid 4px $secondary;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, .2);
+        margin: 0 10px;
+
+        .icon-list {
+            i.text-theme {
+                color: $secondary;
+
+                &:before {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+}
+
+/* ----------------------------------------------------------------
+    Overlay CSS
+-----------------------------------------------------------------*/
+
+.overlay {
+    .overlay-wrap {
+        background-color: rgba(0,0,0,.3) !important;
+    }
+}
+
+
+/* ----------------------------------------------------------------
+    Top Nav Custom CSS
+-----------------------------------------------------------------*/
+.sticky-header {
+    #header-wrap {
+        -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.15);
+        box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.15);
+    }
+}
+
+/* ----------------------------------------------------------------
+    Home Slider Custom CSS
+-----------------------------------------------------------------*/
+.home-slider{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background-image: radial-gradient(circle, $white 60%, $secondary);
+
+}
+
+/* ----------------------------------------------------------------
+    Dog Images Custom CSS (modified product)
+-----------------------------------------------------------------*/
+.dog {
+
+}
+body {
+    &:not(.device-touch):not(.device-sm):not(.device-xs) {
+        .dog-image {
+            & > a {
+                @include transition(all .5s ease);
+            }
+        }
+    }
+}
+.dog-image {
+    &:nth-of-type(2) {
+        opacity: 0;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+    }
+    &:hover {
+        &:nth-of-type(2) {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+}
+
+.dog-overlay {
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    top: auto;
+    bottom: -44px;
+    left: 0;
+    z-index: 6;
+    a {
+        display: block;
+        width: 100%;
+        font-size: 13px;
+        color: #333;
+        background-color: #F5F5F5;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.1);
+        i {
+            position: relative;
+            top: 1px;
+            font-size: 14px;
+            margin-right: 3px;
+        }
+        &:hover {
+            background-color: #333;
+            color: #FFF;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+
