@@ -3,6 +3,7 @@
 namespace Concrete\Package\GoogleCalendar\Block\GoogleCalendar;
 
 use Concrete\Core\Block\BlockController;
+use Concrete\Core\Asset\AssetList;
 
 class Controller extends BlockController
 {
@@ -22,6 +23,44 @@ class Controller extends BlockController
     public function getBlockTypeDescription()
     {
         return 'Block displays Google Calendars in a full calendar view.';
+    }
+
+    public function on_start()
+    {
+        $al = AssetList::getInstance();
+        $al->register(
+            'javascript', 'moment', 'blocks/google_calendar/fullcalendar/lib/moment.min.js',
+            array('version' => '3.9.0', 'minify' => false, 'combine' => true),
+            'google_calendar'
+        );
+        $al->register(
+            'javascript', 'fullcalendar', 'blocks/google_calendar/fullcalendar/fullcalendar.min.js',
+            array('version' => '3.9.0', 'minify' => false, 'combine' => true),
+            'google_calendar'
+        );
+        $al->register(
+            'javascript', 'gcal', 'blocks/google_calendar/fullcalendar/gcal.min.js',
+            array('version' => '3.9.0', 'minify' => false, 'combine' => true),
+            'google_calendar'
+        );
+        $al->register(
+            'css', 'fullcalendar', 'blocks/google_calendar/fullcalendar/fullcalendar.min.css',
+            array('version' => '3.9.0', 'minify' => false, 'combine' => true),
+            'google_calendar'
+        );
+
+        $al->registerGroup('fullcalendar', array(
+            array('css', 'fullcalendar'),
+            array('javascript', 'jquery'),
+            array('javascript', 'moment'),
+            array('javascript', 'fullcalendar'),
+            array('javascript', 'gcal'),
+        ));
+    }
+
+    public function registerViewAssets($outputContent = '')
+    {
+        $this->requireAsset('fullcalendar');
     }
 
     public function view()
@@ -44,8 +83,8 @@ class Controller extends BlockController
 
     public function edit()
     {
-        $calendarList = new CalendarList();
-        $this->set('calendarList', $calendarList->getNameList());
+        $gcs = $this->app->make('google_calendar_service');
+        $this->set('calendarList', $gcs->getCalendarList());
         $this->set('calendars', unserialize($this->calendars));
     }
 
@@ -61,7 +100,7 @@ class Controller extends BlockController
 
     public function validate($args)
     {
-        $error = Core::make('helper/validation/error');
+        $error = $this->app->make('helper/validation/error');
 
         if (!$args['monthView'] && !$args['weekView'] && !$args['dayView']) {
             $error->add(t('You must select at least 1 view.'));

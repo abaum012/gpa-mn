@@ -7,17 +7,18 @@ use Concrete\Core\Block\BlockType\BlockType;
 use Page;
 use SinglePage;
 use Route;
-use Concrete\Core\Database\EntityManager\Provider\ProviderAggregateInterface;
-use Concrete\Core\Database\EntityManager\Provider\StandardPackageProvider;
 
 defined('C5_EXECUTE') or die(_("Access Denied."));
 
-class Controller extends Package implements ProviderAggregateInterface
+class Controller extends Package
 {
     protected $pkgHandle = 'google_calendar';
     protected $appVersionRequired = '8.0.0.0';
     protected $pkgVersion = '1.0.0';
-    protected $pkgAutoloaderMapCoreExtensions = true;
+
+    protected $pkgAutoloaderRegistries = array(
+        'src/' => '\GoogleCalendar'
+    );
 
     protected $blocks = [
         'google_calendar',
@@ -31,24 +32,20 @@ class Controller extends Package implements ProviderAggregateInterface
         ]
     ];
 
+    public function getPackageName()
+    {
+        return t("Google Calendar");
+    }
 
     public function getPackageDescription()
     {
         return t("Google Calendar Blocks for Concrete5");
     }
 
-    public function getEntityManagerProvider()
-    {
-        $provider = new StandardPackageProvider($this->app, $this, [
-            'src/Concrete/Entity' => 'Concrete\Package\GoogleCalendar\Entity'
-        ]);
-        return $provider;
-    }
-
     public function on_start()
     {
-        $this->app->singleton('google_calendar_service', 'Concrete\Package\GoogleCalendar\GoogleCalendarService');
-        Route::register('/events/get-events', 'Concrete\Package\GoogleCalendar\GoogleCalendarService::getEventsAjax');
+        $this->app->singleton('google_calendar_service', 'GoogleCalendar\GoogleCalendarService');
+        Route::register('/api/events', 'Concrete\Package\GoogleCalendar\Controller\Api\GoogleCalendar::getEvents');
     }
 
     public function install()
