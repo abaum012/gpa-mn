@@ -8,7 +8,7 @@ class PageTheme extends Theme implements ThemeProviderInterface
 {
     public function registerAssets()
     {
-        //$this->providesAsset('javascript', 'bootstrap/*');
+        $this->providesAsset('javascript', 'bootstrap/*');
         $this->providesAsset('css', 'bootstrap/*');
 
         $this->requireAsset('css', 'font-awesome');

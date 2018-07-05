@@ -430,6 +430,17 @@ class File extends \Concrete\Core\Entity\File\File implements \Doctrine\ORM\Prox
     /**
      * {@inheritDoc}
      */
+    public function getFileSetIDs()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getFileSetIDs', []);
+
+        return parent::getFileSetIDs();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getFileSets()
     {
 

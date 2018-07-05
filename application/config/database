@@ -1,0 +1,15 @@
+<?php
+
+return [
+    'default-connection' => 'concrete',
+    'connections' => [
+        'concrete' => [
+            'driver' => 'c5_pdo_mysql',
+            'server' => 'localhost',
+            'database' => 'gpa_mn',
+            'username' => 'gpa_mn_user',
+            'password' => 'SD7uX5fNdaz3GL9E',
+            'charset' => 'utf8',
+        ],
+    ],
+];

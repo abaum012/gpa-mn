@@ -19,14 +19,13 @@ $this->inc('elements/header.php');
                 </div>
                 <div class="col-xl-6">
                     <div class="owl-carousel">
-                        <div class="card">
-                            <img class="card-image-top" src="<?php echo $view->getThemePath(); ?>/img/demo/clint1.jpg">
-                            <div class="card-body">
-                                <p class="card-title">Minnie</p>
-                            </div>
-                        </div>
                         <div class="dog">
                             <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/clint1.jpg">
+                            <h5 class="dog-name">Clint</h5>
+                        </div>
+                        <div class="dog text-center">
+                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/clint1.jpg">
+                            <h5>Clint</h5>
                         </div>
                         <div class="dog">
                             <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/keeper.jpg">
@@ -97,7 +96,7 @@ $this->inc('elements/header.php');
                     </div>
                 </div>
             </section>
-            <section class="bottommargin-lg" id="about">
+            <section class="topmargin-lg" id="about">
                 <div class="container clearfix">
                     <div class="row">
                         <div class="row clearfix">

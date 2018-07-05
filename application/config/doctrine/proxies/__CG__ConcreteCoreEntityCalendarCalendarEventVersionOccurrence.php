@@ -178,6 +178,72 @@ class CalendarEventVersionOccurrence extends \Concrete\Core\Entity\Calendar\Cale
     /**
      * {@inheritDoc}
      */
+    public function getAttribute($ak, $mode = false)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAttribute', [$ak, $mode]);
+
+        return parent::getAttribute($ak, $mode);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAttributeValue($ak)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAttributeValue', [$ak]);
+
+        return parent::getAttributeValue($ak);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getAttributeValueObject($ak, $createIfNotExists = false)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getAttributeValueObject', [$ak, $createIfNotExists]);
+
+        return parent::getAttributeValueObject($ak, $createIfNotExists);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getObjectAttributeCategory()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getObjectAttributeCategory', []);
+
+        return parent::getObjectAttributeCategory();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function clearAttribute($ak)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'clearAttribute', [$ak]);
+
+        return parent::clearAttribute($ak);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setAttribute($ak, $value)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setAttribute', [$ak, $value]);
+
+        return parent::setAttribute($ak, $value);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
     public function getJSONObject()
     {
 

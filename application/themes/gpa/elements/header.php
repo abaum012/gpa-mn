@@ -35,7 +35,7 @@ $this->inc('elements/header_top.php');
                     <img src="<?php echo $view->getThemePath()?>/img/logo.png">
                 </a>
             </div>
-            <nav id="primary-menu">
+            <nav id="primary-menu" class="on-click">
                 <?php
                     $nav = BlockType::getByHandle('autonav');
                     $nav->controller->orderBy = 'display_asc';

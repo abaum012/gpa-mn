@@ -26724,3 +26724,34 @@ body:not(.device-touch):not(.device-sm):not(.device-xs) .dog-image > a {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* ----------------------------------------------------------------
+    Owl Carousel
+-----------------------------------------------------------------*/
+
+.owl-carousel {
+  text-align: center;
+}
+
+.owl-carousel .dog-name {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.owl-carousel .owl-dots .owl-dot {
+  border: none;
+  margin-top: 0;
+}
+
+.owl-carousel .owl-dots .owl-dot span {
+  height: 10px;
+  width: 10px;
+}
+
+/* ----------------------------------------------------------------
+    Calendar
+-----------------------------------------------------------------*/
+
+.fc-view table {
+  margin: 0;
+}
+

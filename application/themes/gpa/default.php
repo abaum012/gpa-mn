@@ -6,13 +6,11 @@ $this->inc('elements/page-title.php');
 ?>
     <section id="content">
         <div class="content-wrap">
-            <div class="container clearfix">
-                <?php
-                $a = new Area('Main');
-                $a->enableGridContainer();
-                $a->display($c);
-                ?>
-            </div>
+            <?php
+            $a = new Area('Main');
+            $a->enableGridContainer();
+            $a->display($c);
+            ?>
     </section>
 
 <?php

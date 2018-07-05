@@ -14,19 +14,17 @@ $page = Page::getCurrentPage();
     <script>
 
         $(document).ready(function () {
-
             $('#calendar').fullCalendar({
                 header: {
                     left: 'title',
                     center: '',
                     right: '<?php echo $calendarViews; ?> today prev,next'
                 },
-
                 weekends: <?php echo $displayWeekends ? 'true' : 'false'; ?>,
-
                 defaultView: '<?php echo $defaultView ?>',
-
                 eventLimit: true,
+                height: 'auto',
+                fixedWeekCount: false,
                 events: function (start, end, timezone, callback) {
                     $.ajax({
                         beforeSend: function () {
