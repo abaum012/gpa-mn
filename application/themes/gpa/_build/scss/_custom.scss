@@ -44,7 +44,8 @@ ul.icon-list {
     Isotope Grid Custom CSS
 -----------------------------------------------------------------*/
 .grid-item {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 
@@ -71,6 +72,50 @@ ul.icon-list {
         }
     }
 
+    .ribbon {
+        z-index: 10;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+
+        span {
+            position: absolute;
+            display: block;
+            width: 225px;
+            padding: 10px 0;
+            background-color: $primary;
+            color: #fff;
+            font: 700 13px/1 'Lato', sans-serif;
+            text-shadow: 0 1px 1px rgba(0,0,0,.2);
+            text-transform: uppercase;
+            text-align: center;
+            right: -20px;
+            top: 40px;
+            transform: rotate(-45deg);
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            border: 5px solid hsl(hue($primary), saturation($primary), 25);
+            border-top-color: transparent;
+            border-left-color: transparent;
+        }
+
+        &::before {
+            top: 0;
+            right: 13px;
+        }
+        &::after {
+            bottom: 13px;
+            left: 0;
+        }
+    }
 }
 
 /* ----------------------------------------------------------------

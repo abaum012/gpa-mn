@@ -1,10 +1,15 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
+<style>
+</style>
 <div class="grid grid-container">
     <div class="col-lg-12 col-xl-6 grid-sizer"></div>
     <?php foreach ($hounds as $hound) : ?>
         <div class="col-lg-12 col-xl-6 grid-item">
             <div class="grid-content">
                 <div class="card">
+                    <?php if($hound['animalAdoptionPending'] == 'Yes'): ?>
+                    <div class="ribbon ribbon-top-right"><span>Adoption Pending</span></div>
+                    <?php endif; ?>
                     <div class="card-body">
                         <div class="team team-list clearfix">
                             <div class="team-image">

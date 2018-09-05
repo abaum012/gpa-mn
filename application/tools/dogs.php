@@ -18,7 +18,8 @@ $data = [
             "animalOKWithDogs",
             "animalSummary",
             "animalDescriptionPlain",
-            "animalPictures"
+            "animalPictures",
+            "animalAdoptionPending"
         ],
         "filters" => [
             [

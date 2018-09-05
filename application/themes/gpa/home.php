@@ -101,14 +101,16 @@ $this->inc('elements/header.php');
                     <div class="row">
                         <div class="row clearfix">
                             <div class="col-lg-6">
-                                <div class="heading-block topmargin">
-                                    <h1>GPA - MN</h1>
-                                </div>
-                                <p class="lead">A Twin Cities based volunteer run organization, dedicated to rescuing and placing retired racing greyhounds.</p>
-                                <p><a href="#" class="button button-border button-circle">About Our Organization</a></p>
+                                <?php
+                                $a = new Area('Home Bottom 1');
+                                $a->display($c);
+                                ?>
                             </div>
                             <div class="col-lg-6">
-                                <img src="http://www.gpa-mn.org/uploads/7/2/1/4/7214501/6398490_orig.jpg" class="img-fluid">
+                                <?php
+                                $a = new Area('Home Bottom 2');
+                                $a->display($c);
+                                ?>
                             </div>
                         </div>
                     </div>
