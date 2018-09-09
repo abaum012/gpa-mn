@@ -15,7 +15,7 @@
         <div class="container clearfix">
 
             <div class="col_half">
-                &copy; <?php echo Date('Y');?> Greyhound Pets of America - Minnesota<br>
+                &copy; <?php echo Date('Y');?> Greyhound Pets of America Minnesota<br>
             </div>
 
             <div class="col_half col_last tright">

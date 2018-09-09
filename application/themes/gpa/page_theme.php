@@ -32,22 +32,6 @@ class PageTheme extends Theme implements ThemeProviderInterface
     /**
      * @return array
      */
-    public function getThemeBlockClasses()
-    {
-        return [];
-    }
-
-    /**
-     * @return array
-     */
-    public function getThemeAreaClasses()
-    {
-        return [];
-    }
-
-    /**
-     * @return array
-     */
     public function getThemeDefaultBlockTemplates()
     {
         return [];
@@ -71,16 +55,48 @@ class PageTheme extends Theme implements ThemeProviderInterface
      */
     public function getThemeEditorClasses()
     {
+        return [
+            [
+                'title' => t('Small'),
+                'element' => ['p'],
+                'attributes' => ['class' => 'small']
+            ],
+            [
+                'title' => t('Image Full'),
+                'element' => ['img'],
+                'attributes' => ['class' => 'img-fluid']
+            ],
+            [
+                'title' => t('Image - Left'),
+                'element' => ['img'],
+                'attributes' => ['class' => 'img-left']
+            ],
+            [
+                'title' => t('Image - Right'),
+                'element' => ['img'],
+                'attributes' => ['class' => 'img-right']
+            ],
+            [
+                'title' => t('Button'),
+                'element' => ['a', 'button'],
+                'attributes' => ['class' => 'button button-border button-circle']
+            ],
+            [
+                'title' => t('Button Full Width'),
+                'element' => ['a', 'button'],
+                'attributes' => ['class' => 'btn btn-primary btn-block']
+            ],
+            [
+                'title' => t('Button Small'),
+                'element' => ['a', 'button'],
+                'attributes' => ['class' => 'btn btn-secondary btn-sm']
+            ]
+        ];
+    }
+
+    public function getThemeAreaLayoutPresets()
+    {
         return [];
     }
 
-    /**
-     * @return array
-     */
-    public function getThemeAreaLayoutPresets()
-    {
-        $presets = [];
-
-        return $presets;
-    }
 }

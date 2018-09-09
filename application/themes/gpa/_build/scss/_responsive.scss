@@ -1618,12 +1618,15 @@
 	.team {
 		&.team-list {
 			.team-image {
-				float: none;
-				width: 100%;
-				margin-right: 0;
+				float: none !important;
+				width: 100% !important;
+				margin-right: 0 !important;
 			}
 			.team-title {
 				margin-top: 15px;
+			}
+			.team-content .learn-more-button {
+				text-align: center;
 			}
 		}
 	}

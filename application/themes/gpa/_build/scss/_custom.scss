@@ -148,7 +148,11 @@ ul.icon-list {
     height: 500px;
     overflow: hidden;
     background-image: radial-gradient(circle, $white 60%, $secondary);
-
+}
+@media (max-width: 992px) {
+    .home-slider {
+        height: inherit;
+    }
 }
 
 /* ----------------------------------------------------------------

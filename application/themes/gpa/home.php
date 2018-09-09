@@ -6,37 +6,20 @@ $this->inc('elements/header.php');
 
     <section class="home-slider clearfix d-flex align-items-center">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mt-3 mb-3">
                     <div class="home-slide-content">
-                        <h3 class="display-3">Find Your Match!</h3>
-                        <p class="lead">Our experience shows that successful, life-long adoptions are achieved by carefully and thoughtfully considering each match.</p>
-                        <div class="row">
-                            <div class="col-lg-6 text-center"><a href="#" class="button button-border button-circle">Available Dogs</a></div>
-                            <div class="col-lg-6 text-center"><a href="#" class="button button-border button-circle">Adoption Process</a></div>
-                        </div>
+                        <?php
+                        $a = new Area('Banner Content');
+                        $a->display($c);
+                        ?>
                     </div>
                 </div>
-                <div class="col-xl-6">
-                    <div class="owl-carousel">
-                        <div class="dog">
-                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/clint1.jpg">
-                            <h5 class="dog-name">Clint</h5>
-                        </div>
-                        <div class="dog text-center">
-                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/clint1.jpg">
-                            <h5>Clint</h5>
-                        </div>
-                        <div class="dog">
-                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/keeper.jpg">
-                        </div>
-                        <div class="dog">
-                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/lash.jpg">
-                        </div>
-                        <div class="dog">
-                            <img class="dog-image" src="<?php echo $view->getThemePath(); ?>/img/demo/lobstah.jpg">
-                        </div>
-                    </div>
+                <div class="col-lg-6 mt-3 mb-3">
+                    <?php
+                    $a = new Area('Dog Carousel');
+                    $a->display($c);
+                    ?>
                 </div>
             </div>
         </div>

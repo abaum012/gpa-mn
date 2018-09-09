@@ -12,11 +12,6 @@ class HoundService
         $this->config = $app->make('config');
     }
 
-    public function getHoundImages()
-    {
-
-    }
-
     public function getHounds()
     {
         $url = 'https://api.rescuegroups.org/http/v2.json';

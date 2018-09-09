@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="<?php echo $view->getThemePath()?>/css/style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="stretched no-transition">
+<body class="stretched">
 
 <div id="wrapper" class="<?php echo $c->getPageWrapperClass()?>">
 

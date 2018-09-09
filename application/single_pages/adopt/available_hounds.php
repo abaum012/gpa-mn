@@ -40,6 +40,7 @@
                                                 <i class="fa fa-words fa-border-circle fa-stack-1x ">AGE</i>
                                             </span>
                                             <?php
+                                            // This should go in the hounds service
                                             $now = date_create();
                                             $bd = date_create_from_format('n/j/Y', $hound['animalBirthdate']);
                                             $interval = $now->diff($bd);
@@ -87,7 +88,7 @@
                                                 Cat Friendliness
                                             <?php endif; ?>
                                         </li>
-                                        <li>
+                                        <li class="learn-more-button">
                                             <button
                                                     data-toggle="modal"
                                                     data-target="#modal-<?php echo $hound['animalID'] ?>"

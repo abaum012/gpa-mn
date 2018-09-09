@@ -984,14 +984,14 @@ var CUSTOM = CUSTOM|| {};
 				e.preventDefault();
 			});
 
-			// var responsiveThreshold = $header.attr('data-responsive-under');
-			// if( !responsiveThreshold ) { responsiveThreshold = 992; }
+			var responsiveThreshold = $header.attr('data-responsive-under');
+			if( !responsiveThreshold ) { responsiveThreshold = 992; }
 
-			// if( windowWidth < Number( responsiveThreshold ) ) {
-			// 	$body.addClass('mobile-header-active');
-			// } else {
-			// 	$body.removeClass('mobile-header-active');
-			// }
+			if( windowWidth < Number( responsiveThreshold ) ) {
+				$body.addClass('mobile-header-active');
+			} else {
+				$body.removeClass('mobile-header-active');
+			}
 
 			if( SEMICOLON.isMobile.Android() ) {
 				$( '#primary-menu ul li.sub-menu' ).children('a').on('touchstart', function(e){
@@ -1950,34 +1950,34 @@ var CUSTOM = CUSTOM|| {};
 
 	}*/;
 
-/*	SEMICOLON.widget = {
+	SEMICOLON.widget = {
 
 		init: function(){
 
-			SEMICOLON.widget.animations();
-			SEMICOLON.widget.youtubeBgVideo();
-			SEMICOLON.widget.tabs();
-			SEMICOLON.widget.tabsJustify();
-			SEMICOLON.widget.tabsResponsive();
-			SEMICOLON.widget.tabsResponsiveResize();
-			SEMICOLON.widget.toggles();
+			// SEMICOLON.widget.animations();
+			// SEMICOLON.widget.youtubeBgVideo();
+			// SEMICOLON.widget.tabs();
+			// SEMICOLON.widget.tabsJustify();
+			// SEMICOLON.widget.tabsResponsive();
+			// SEMICOLON.widget.tabsResponsiveResize();
+			// SEMICOLON.widget.toggles();
 			SEMICOLON.widget.accordions();
-			SEMICOLON.widget.counter();
-			SEMICOLON.widget.roundedSkill();
-			SEMICOLON.widget.progress();
-			SEMICOLON.widget.twitterFeed();
-			SEMICOLON.widget.flickrFeed();
-			SEMICOLON.widget.instagramPhotos( '20524966.1677ed0.bf5dbdbfdd884927a421ffe2b639b1da', '5125dda742b5492488c790c2a440ace3' );
-			SEMICOLON.widget.dribbbleShots( '012d3d72d12f93e1d41a19195d7da2fc87e6b5afa48a184256e398eb793cfe56' );
-			SEMICOLON.widget.navTree();
-			SEMICOLON.widget.textRotater();
-			SEMICOLON.widget.carousel();
-			SEMICOLON.widget.linkScroll();
-			SEMICOLON.widget.contactForm();
-			SEMICOLON.widget.subscription();
-			SEMICOLON.widget.quickContact();
-			SEMICOLON.widget.stickySidebar();
-			SEMICOLON.widget.cookieNotify();
+			// SEMICOLON.widget.counter();
+			// SEMICOLON.widget.roundedSkill();
+			// SEMICOLON.widget.progress();
+			// SEMICOLON.widget.twitterFeed();
+			// SEMICOLON.widget.flickrFeed();
+			// SEMICOLON.widget.instagramPhotos( '20524966.1677ed0.bf5dbdbfdd884927a421ffe2b639b1da', '5125dda742b5492488c790c2a440ace3' );
+			// SEMICOLON.widget.dribbbleShots( '012d3d72d12f93e1d41a19195d7da2fc87e6b5afa48a184256e398eb793cfe56' );
+			// SEMICOLON.widget.navTree();
+			// SEMICOLON.widget.textRotater();
+			// SEMICOLON.widget.carousel();
+			// SEMICOLON.widget.linkScroll();
+			// SEMICOLON.widget.contactForm();
+			// SEMICOLON.widget.subscription();
+			// SEMICOLON.widget.quickContact();
+			// SEMICOLON.widget.stickySidebar();
+			// SEMICOLON.widget.cookieNotify();
 			SEMICOLON.widget.extras();
 
 		},
@@ -3313,6 +3313,7 @@ var CUSTOM = CUSTOM|| {};
 			});
 
 			$('#primary-menu-trigger,#overlay-menu-close').click(function() {
+			    console.log('test');
 				if( $('#primary-menu').find('ul.mobile-primary-menu').length > 0 ) {
 					$( '#primary-menu > ul.mobile-primary-menu, #primary-menu > div > ul.mobile-primary-menu' ).toggleClass('d-block');
 				} else {
@@ -3343,7 +3344,7 @@ var CUSTOM = CUSTOM|| {};
 			// el.darkRetinaLogo.css({'position':'absolute','z-index':'-100'});
 		}
 
-	}*/;
+	}
 
 	SEMICOLON.isMobile = {
 		Android: function() {
@@ -3384,6 +3385,9 @@ var CUSTOM = CUSTOM|| {};
                 items:1,
                 loop:true,
                 margin:10,
+                autoplay:true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
                 responsive:{
                     600:{
                         items:3
@@ -3443,7 +3447,7 @@ var CUSTOM = CUSTOM|| {};
 			SEMICOLON.header.init();
 			//if( $slider.length > 0 || $sliderElement.length > 0 ) { SEMICOLON.slider.init(); }
 			//if( $portfolio.length > 0 ) { SEMICOLON.portfolio.init(); }
-			//SEMICOLON.widget.init();
+			SEMICOLON.widget.init();
 			SEMICOLON.documentOnReady.windowscroll();
 		},
 
