@@ -15,7 +15,7 @@ $this->inc('elements/header_top.php');
         <div class="col_half fright col_last nobottommargin">
             <div id="top-social">
                 <?php
-                $a = new Area('Social Links');
+                $a = new GlobalArea('Social Links');
                 $a->setCustomTemplate('social_links', 'top_links.php');
                 $a->display($c);
                 ?>

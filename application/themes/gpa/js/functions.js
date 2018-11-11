@@ -3386,7 +3386,8 @@ var CUSTOM = CUSTOM|| {};
                 loop:true,
                 margin:10,
                 autoplay:true,
-                autoplayTimeout: 3000,
+                autoplayTimeout: 5000,
+                autoplaySpeed: 1500,
                 autoplayHoverPause: true,
                 responsive:{
                     600:{

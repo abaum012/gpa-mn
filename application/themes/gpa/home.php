@@ -82,7 +82,6 @@ $this->inc('elements/header.php');
             <section class="topmargin-lg" id="about">
                 <div class="container clearfix">
                     <div class="row">
-                        <div class="row clearfix">
                             <div class="col-lg-6">
                                 <?php
                                 $a = new Area('Home Bottom 1');
@@ -95,7 +94,6 @@ $this->inc('elements/header.php');
                                 $a->display($c);
                                 ?>
                             </div>
-                        </div>
                     </div>
                 </div>
             </section>

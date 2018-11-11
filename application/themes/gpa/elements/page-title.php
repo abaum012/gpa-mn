@@ -1,5 +1,5 @@
 <?php defined('C5_EXECUTE') or die("Access Denied."); ?>
-<section id="page-title" class="page-title-parallax page-title-dark"
+<section id="page-title" class="page-title-dark"
     <?php if ($ptImage): ?>
         style="background-image: url('<?php echo $ptImage; ?>');"
     <?php endif; ?>>

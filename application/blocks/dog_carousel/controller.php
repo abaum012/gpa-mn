@@ -26,7 +26,10 @@ class Controller extends BlockController
     public function view()
     {
         $hounds = $this->houndService->getHounds();
-        shuffle($hounds);
-        $this->set('hounds', $hounds);
+        if ($hounds)
+        {
+            shuffle($hounds);
+            $this->set('hounds', $hounds);
+        }
     }
 }

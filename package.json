@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.1.1",
+    "bootstrap": "^4.1.3",
     "googleapis": "^26.0.1",
-    "laravel-mix": "^2.1.11"
+    "laravel-mix": "^2.1.14"
   }
 }
