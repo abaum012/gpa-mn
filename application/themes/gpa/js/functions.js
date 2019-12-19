@@ -993,13 +993,13 @@ var CUSTOM = CUSTOM|| {};
 				$body.removeClass('mobile-header-active');
 			}
 
-			if( SEMICOLON.isMobile.Android() ) {
-				$( '#primary-menu ul li.sub-menu' ).children('a').on('touchstart', function(e){
-					if( !$(this).parent('li.sub-menu').hasClass('sfHover') ) {
-						e.preventDefault();
-					}
-				});
-			}
+			// if( SEMICOLON.isMobile.Android() ) {
+			// 	$( '#primary-menu ul li.sub-menu' ).children('a').on('touchstart', function(e){
+			// 		if( !$(this).parent('li.sub-menu').hasClass('sfHover') ) {
+			// 			e.preventDefault();
+			// 		}
+			// 	});
+			// }
 
 			if( SEMICOLON.isMobile.Windows() ) {
 				if( $().superfish ){
@@ -3313,7 +3313,6 @@ var CUSTOM = CUSTOM|| {};
 			});
 
 			$('#primary-menu-trigger,#overlay-menu-close').click(function() {
-			    console.log('test');
 				if( $('#primary-menu').find('ul.mobile-primary-menu').length > 0 ) {
 					$( '#primary-menu > ul.mobile-primary-menu, #primary-menu > div > ul.mobile-primary-menu' ).toggleClass('d-block');
 				} else {

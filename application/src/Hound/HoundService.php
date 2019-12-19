@@ -50,10 +50,12 @@ class HoundService
             'objectAction' => 'publicSearch',
             'search' => [
                 'resultSort' => 'animalName',
+                "resultLimit" => 50,
                 'fields' => [
                     'animalID',
                     'animalName',
                     'animalBirthdate',
+                    'animalSex',
                     'animalSpecies',
                     'animalThumbnailUrl',
                     'animalOKWithCats',

@@ -29,9 +29,9 @@
                             </div>
                             <div class="team-desc">
                                 <div class="team-title">
-                                    <h2 class="mb-1">
-                                        <?php echo $hound['animalName'] ?></h2>
+                                    <h2 class="mb-1"><?php echo $hound['animalName'] ?></h2>
                                     <span><?php echo $hound['animalSummary'] ?></span>
+                                    <span class="text-muted"><?php echo $hound['animalSex'] ?></span>
                                 </div>
                                 <div class="team-content">
                                     <ul class="icon-list ">
