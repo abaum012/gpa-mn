@@ -72,7 +72,7 @@
 .owl-carousel.owl-loading {
 	display:block;
 	min-height: 100px;
-	background: url('../../img/preloader.gif') no-repeat center center
+	background: url('../../../img/preloader.gif') no-repeat center center
 }
 
 .owl-carousel .owl-refresh .owl-item { display:none }
@@ -163,7 +163,7 @@
 	top: 50%;
 	margin-left: -32px;
 	margin-top: -32px;
-	background: url("../../img/icons/play.png") no-repeat;
+	background: url("../../../img/icons/play.png") no-repeat;
 	cursor: pointer;
 	z-index: 1;
 	-webkit-backface-visibility: hidden;

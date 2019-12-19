@@ -10,7 +10,8 @@
                     <?php if($hound['animalAdoptionPending'] == 'Yes'): ?>
                     <div class="ribbon ribbon-top-right"><span>Adoption Pending</span></div>
                     <?php endif; ?>
-                    <div class="card-body">
+                    <div class="card-body" id="<?php echo $hound['animalName']; ?>">
+                        
                         <div class="team team-list clearfix">
                             <div class="team-image">
                                 <div data-lightbox="gallery">
